@@ -35,4 +35,11 @@ pipeline {
             }
         }
     }
+    //runs after the stages.
+    post {
+        //regardless of wheater stages completes or not show junit report 
+        always {
+            junit 'test-results/junit.xml'
+        }
+    }
 }
